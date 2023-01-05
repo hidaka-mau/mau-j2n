@@ -35,7 +35,7 @@ git commit -m”残したいコメント” と入力するとファイルがgit
 https://github.com/ へアクセスする→「sign up」ボタンをクリックする→ユーザ名・メールアドレス・パスワード　を入力する→登録したメールアドレスに数字が記載されたメールが届くのを確認する→数字を入力する→プランの選択をする→登録完了
 
 ## 1-6 githubへのREADME.mdの公開方法
-terminal を開く→ディレクトリをgithubのリポジトリに移動する→コマンドでREADME.mdを作成する("touch README.md")→README.mdを編集する→"git add README.md"でgithubのリポジトリに追加する→"git commit -m"コメント" " で登録する→"git push origin master"でリポジトリにアップロードする
+[terminal] を開く→ディレクトリをgithubのリポジトリに移動する→コマンドでREADME.mdを作成する("touch README.md")→README.mdを編集する→"git add README.md"でgithubのリポジトリに追加する→"git commit -m"コメント" " で登録する→"git push origin master"でリポジトリにアップロードする
 
 # 2. GitHubとはGitを用いてバージョン管理をすることができ、Gitにはない機能を持った
 世界中の開発環境で利用されているサービスである。<br>
