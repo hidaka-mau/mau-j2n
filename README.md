@@ -117,8 +117,8 @@ origin	git@github.com:hidaka-mau/mau-j2n.git (push)
 
 
   参考文献：
-  ・『Web制作者のためのGitHubの教科書　チームの効率を最大化する共同開発ツール』
+  * 『Web制作者のためのGitHubの教科書　チームの効率を最大化する共同開発ツール』
 　　　塩谷　哲、柴竹　佑騎、平木　聡　インプレス
-・『わかばちゃんと学ぶ　Git使い方入門』　湊川 愛 著、DQNEO 監修　C&R研究所
-  ・https://prog-8.com/docs/git-env
+  * 『わかばちゃんと学ぶ　Git使い方入門』　湊川 愛 著、DQNEO 監修　C&R研究所
+  * https://prog-8.com/docs/git-env
   　　　　　
