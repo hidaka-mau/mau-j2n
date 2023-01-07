@@ -113,7 +113,7 @@ origin	git@github.com:hidaka-mau/mau-j2n.git (push)
 * gitに入れたいファイルを作成したら、`git add ファイル名`を入力する
 * `git commit -m "Create メッセージ`
 * `git push origin master`
-  これで完了
+  これで完了!
 
 
   参考文献：
