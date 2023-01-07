@@ -99,7 +99,7 @@ The key's randomart image is:
 ```
 Hi hidaka-mau! You've successfully authenticated, but GitHub does not provide shell access.
 ```
-とログが返ってきたら成功
+とログが返ってきたら成功！
 
 * ディレクトリを作成する`mkdir フォルダ名`
 * 作成したディレクトリに移動する`cd フォルダ名`
@@ -115,6 +115,9 @@ origin	git@github.com:hidaka-mau/mau-j2n.git (push)
 * `git commit -m "Create メッセージ`
 * `git push origin master`
   これで完了!
+
+* ` git branch -M main`　このコマンドでブランチ名をmainに変更することができるが、masterで作業を行っている途中で行うと変なことになる可能性があるので、リポジトリを立ち上げたら最初に行う方が良い。
+* GitHub上でプッシュがうまく行ったか試しに確認した時に、自分のいるブランチが切り替わってしまったので、`git chekout master`で戻る必要がある。
 
 
   参考文献：
