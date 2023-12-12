@@ -119,10 +119,18 @@ Hi hidaka-mau! You've successfully authenticated, but GitHub does not provide sh
 ~~* gitに入れたいファイルを作成したら、`git add ファイル名`を入力する~~
 ~~* `git commit -m "Create メッセージ"`~~
 
+#### tokenを発行する
+* 自分のアイコンをクリックして`Settings`を開く
+* `Developer settings`を開く
+* `Tokens(classic)`を選択して、プルダウンから`Generate new token`を開く<br>
+![Alt text](image-3.png)
+* `Note`に何か入力し、`Expiration`のプルダウンから期間を選択し、`repo`にチェックをいれる
+* この設定の後にtokenが表示されるので、どこかにコピーしておいて保管する
+
 #### gitとgithubを接続する
 * ターミナルで`git remote add origin <URL>`と入力する
 * `git push -u origin master`と入力する。
-* ユーザーネームとパスワードを聞かれるので、ユーザーネームに`hadaka-mau`、パスワードにtokenを入力する
+* ユーザーネームとパスワードを聞かれるので、ユーザーネームに`hadaka-mau`、パスワードに`token`を入力する
 
 ```
 * gitとgithubの接続に失敗したエラー<br>
