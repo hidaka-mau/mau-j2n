@@ -37,7 +37,11 @@ Gitを使用することで修正や変更したファイルを管理するこ�
 * 入力すると、`Initialized empty Git repository in パス`というメッセージが表示され、リポジトリが作成される
 
 #### リポジトリというのは、ファイルとかディレクトリの変更履歴を管理する場所のこと
-* 作成したリポジトリにファイルを追加するには`git add 追加したいファイルのパス`
+```
+・1回目の修正
+・ 作成したフォルダ内にファイルを作成する
+・ 作成したリポジトリにファイルを追加するには`git add 追加したいファイル名`
+```
 * 追加したファイルを登録するには`git commit`を行う
   * commitを行う際に`git commit -m メッセージ`で行うと、メッセージ部を残すことができ、履歴として管理しやすくなる
 ※ コミット時に発生したエラー
@@ -101,22 +105,33 @@ Hi hidaka-mau! You've successfully authenticated, but GitHub does not provide sh
 ```
 とログが返ってきたら成功！
 
-* ディレクトリを作成する`mkdir フォルダ名`
-* 作成したディレクトリに移動する`cd フォルダ名`
-* そのフォルダをgitで管理できるように`git init`を行う
-* githubのリポジトリ画面で"HTTPS/SSH"と書かれたボタンの"SSH"をクリックし、コピーボタンをクリックする
-`git remote add origin <URL>`
-* ターミナルで`git remote add origin <ペースト>`を入力するとプッシュ先のリポジトリを登録できる
-* 登録が成功したか`git remote -v`で確認できる(成功していたら以下になる)
-```
-origin	git@github.com:hidaka-mau/mau-j2n.git (fetch)
-origin	git@github.com:hidaka-mau/mau-j2n.git (push)
-```
-* gitに入れたいファイルを作成したら、`git add ファイル名`を入力する
-* `git commit -m "Create メッセージ"`
-```
+~~* ディレクトリを作成する`mkdir フォルダ名`~~
+~~* 作成したディレクトリに移動する`cd フォルダ名`~~
+~~* そのフォルダをgitで管理できるように`git init`を行う~~
+~~* githubのリポジトリ画面で"HTTPS/SSH"と書かれたボタンの"SSH"をクリックし、コピーボタンをクリックする~~
+~~`git remote add origin <URL>`~~
+~~* ターミナルで`git remote add origin <ペースト>`を入力するとプッシュ先のリポジトリを登録できる~~
+~~* 登録が成功したか`git remote -v`で確認できる(成功していたら以下になる)~~
+~~```~~
+~~origin	git@github.com:hidaka-mau/mau-j2n.git (fetch)~~
+~~origin	git@github.com:hidaka-mau/mau-j2n.git (push)~~
+~~```~~
+~~* gitに入れたいファイルを作成したら、`git add ファイル名`を入力する~~
+~~* `git commit -m "Create メッセージ"`~~
 
-・1回目の変更
+#### gitとgithubを接続する
+* ターミナルで`git remote add origin <URL>`と入力する
+* `git push -u origin master`と入力する。
+* ユーザーネームとパスワードを聞かれるので、ユーザーネームに`hadaka-mau`、パスワードにtokenを入力する
+
+```
+* gitとgithubの接続に失敗したエラー<br>
+ remote: Invalid username or password.
+ fatal: Authentication failed for 'https://github.com/hidaka-mau/mau-j2n.git/'
+ 対処法：正しいユーザーネームとパスワードを入力する
+ 注意点：パスワードはgithubのパスワードではなくtokenを発行する必要がある
+```
+```
 ※ Git commitの後に発生したエラー<br>
  Untracked files:<br>
  　  (use "git add <file>..." to include in what will be committed)
@@ -126,7 +141,6 @@ origin	git@github.com:hidaka-mau/mau-j2n.git (push)
 削除するコマンド　”git clean -n”
 ```
 ```
-・2回目の変更
 上のエラーが再度出てきたが、コミットしたいファイルを保存し直して、再度 git addを行った後に
 コミットしたら成功した。
 上の場合は確かに変なファイルがあったと思うが、一度消すよりもファイルをもう一度保存してやり直した方が早いので、
@@ -134,7 +148,6 @@ origin	git@github.com:hidaka-mau/mau-j2n.git (push)
 ```
 
 ```
-・3回目の変更
 ※コミットを失敗した後に出たエラーのログ
 git commitをした後に
 Untracked files:
@@ -162,14 +175,12 @@ READMEは分かるが、.DS_Store　という謎のファイルが入ってい�
 * `git push origin master`
   これで完了!
 ```
-・3回目の変更
   git pudh origin master　のあとはパスワードを聞かれるので、これを打ち込んだら完了！
   //ここで打ち込んでも何も出てこないので、最初入力されているのか不安になるが、そういう仕様。
 ```
 
 * ` git branch -M main`　このコマンドでブランチ名をmainに変更することができるが、masterで作業を行っている途中で行うと変なことになる可能性があるので、リポジトリを立ち上げたら最初に行う方が良い。<br>
 ```
-・1回目の変更
 ※公式でどこかのタイミングから新しく作られたリポジトリのデフォルトのブランチ名は``master``から``main``に変わるらしい
 　この変更は人権運動が背景にあるらしいが、この課題では変える必要はない。そのうち変わるらしいので一応覚えておいた方がいい
 ```
@@ -177,14 +188,12 @@ READMEは分かるが、.DS_Store　という謎のファイルが入ってい�
 * GitHub上でプッシュがうまく行ったか試しに確認した時に、自分のいるブランチが切り替わってしまったので、`git chekout master`で戻る必要がある。
 
 ```
-・2回目の変更
 git log　　で今までコミットしたログが確認できる。
 →ログじゃなくて過去のファイルの内容は確認できないの？
 　　… git show commitID　で変更の差分を確認できた　
 　　　※commitIDはgit logで出てきたログのcommitの後に続く数字とアルファベットの長い文字列のこと
 ```
 ```
-・３回目の変更
 PCをシャットダウンなどをしてターミナルを落とした後は、自分のPCに[github]のフォルダがあるので、
 ターミナルを開き直してディレクトリをgithubの自分のアカウントまで遷移させればgitにコミットできるようになる。
 
